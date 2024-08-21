@@ -27,7 +27,7 @@ setup(
         "boto3==1.22.6",
         "rehydra-core>=1.1.2",
         "ray[default]==1.12.0",
-        "aiohttp==3.8.1",
+        "aiohttp==3.10.2",
         "cloudpickle==2.0.0",
         "pickle5==0.0.11; python_version < '3.8'",
     ],
