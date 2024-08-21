@@ -1,0 +1,8 @@
+observations_names:
+  - "x" 
+  - "y"
+  - "angle"
+
+actions_names:
+  - vel
+  - angle_vel 

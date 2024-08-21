@@ -1,0 +1,3 @@
+rehydra_optuna_sweeper:
+  path: plugins/${.name}
+  version_file: rehydra_plugins/${.name}/__init__.py

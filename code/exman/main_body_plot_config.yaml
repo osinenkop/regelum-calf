@@ -1,0 +1,234 @@
+td3_pendulum:
+  label: "TD3"
+  quantile_below: 0.4
+  quantile_above: 0.6
+  rolling_median_window: 1
+  max_loc: 40000
+  from_nominal: -3330
+  is_smooth_bezier: True
+
+sac_pendulum:
+  label: "SAC"
+  quantile_below: 0.4
+  quantile_above: 0.6
+  rolling_median_window: 1
+  max_loc: 40000
+  from_nominal: -3330
+  is_smooth_bezier: True
+
+calf_pendulum:
+  label: "\\textbf{Our agent}"
+  quantile_below: 0.4
+  quantile_above: 0.6
+  rolling_median_window: 1
+  max_loc: 40000
+  from_nominal: -3330
+  is_smooth_bezier: True
+
+calf_lunar_lander:
+  label: "\\textbf{Our agent}"
+  quantile_below: 0.4
+  quantile_above: 0.6
+  rolling_median_window: 1
+  max_loc: 55000
+  from_nominal: -8000
+  is_smooth_bezier: True
+
+ppo_lunar_lander:
+  label: "PPO"
+  quantile_below: 0.4
+  quantile_above: 0.6
+  rolling_median_window: 10
+  max_loc: 300_000
+  from_nominal: -8000
+  is_smooth_bezier: True
+
+vpg_lunar_lander:
+  label: "VPG"
+  quantile_below: 0.4
+  quantile_above: 0.6
+  rolling_median_window: 10
+  max_loc: 300_000
+  from_nominal: -8000
+  is_smooth_bezier: True
+
+calf_inverted_pendulum:
+  label: "\\textbf{Our agent}"
+  quantile_below: 0.25
+  quantile_above: 0.75
+  rolling_median_window: 1
+  is_smooth_bezier: True
+  from_nominal: -11308
+
+sac_inverted_pendulum:
+  label: "SAC"
+  quantile_below: 0.4
+  quantile_above: 0.6
+  rolling_median_window: 10
+  max_loc: 250_000
+  from_nominal: -11308
+  is_smooth_bezier: True
+
+td3_inverted_pendulum:
+  label: "TD3"
+  quantile_below: 0.4
+  quantile_above: 0.6
+  rolling_median_window: 10
+  max_loc: 250_000
+  from_nominal: -11308
+  is_smooth_bezier: True
+
+calf_3wrobot_kin:
+  label: "\\textbf{Our agent}"
+  quantile_below: 0.4
+  quantile_above: 0.6
+  rolling_median_window: 1
+  is_smooth_bezier: True
+  # max_loc: 10100
+  from_nominal: -30197
+
+reinforce_3wrobot_kin:
+  label: "REINFORCE"
+  quantile_below: 0.4
+  quantile_above: 0.6
+  rolling_median_window: 10
+  max_loc: 50000
+  from_nominal: -30197
+  is_smooth_bezier: True
+
+
+vpg_3wrobot_kin:
+  label: "VPG" 
+  quantile_below: 0.4
+  quantile_above: 0.6
+  rolling_median_window: 10
+  max_loc: 50000
+  from_nominal: -30197
+  is_smooth_bezier: True
+
+td3_3wrobot_kin:
+  label: "TD3"
+  quantile_below: 0.4
+  quantile_above: 0.6
+  rolling_median_window: 10
+  max_loc: 50000
+  from_nominal: -30197.867
+  is_smooth_bezier: True
+
+sac_3wrobot_kin:
+  label: "SAC"
+  quantile_below: 0.4
+  quantile_above: 0.6
+  rolling_median_window: 10
+  max_loc: 50000
+  from_nominal: -30197
+  is_smooth_bezier: True
+
+calf_omnibot:
+  label: "\\textbf{Our agent}"
+  quantile_below: 0.4
+  quantile_above: 0.6
+  rolling_median_window: 1
+  from_nominal: -200400
+  is_smooth_bezier: True
+
+reinforce_omnibot:
+  label: "REINFORCE"
+  quantile_below: 0.4
+  quantile_above: 0.6
+  rolling_median_window: 10
+  max_loc: 100000
+  from_nominal: -200400
+  is_smooth_bezier: True
+
+vpg_omnibot:
+  label: "VPG"
+  quantile_below: 0.4
+  quantile_above: 0.6
+  rolling_median_window: 10
+  max_loc: 100000
+  from_nominal: -200400
+  is_smooth_bezier: True
+
+ddpg_omnibot:
+  label: "DDPG"
+  quantile_below: 0.4
+  quantile_above: 0.6
+  rolling_median_window: 10
+  max_loc: 100000
+  from_nominal: -200400
+  is_smooth_bezier: True
+
+ppo_omnibot:
+  label: "PPO"
+  quantile_below: 0.4
+  quantile_above: 0.6
+  rolling_median_window: 10
+  max_loc: 100000
+  from_nominal: -200400
+  is_smooth_bezier: True
+
+td3_omnibot:
+  label: "TD3"
+  quantile_below: 0.4
+  quantile_above: 0.6
+  rolling_median_window: 10
+  max_loc: 100000
+  from_nominal: -200492.61
+  is_smooth_bezier: True
+
+calf_2tank:
+  label: "\\textbf{Our agent}"
+  quantile_below: 0.3
+  quantile_above: 0.7
+  rolling_median_window: 1
+  is_smooth_bezier: True
+  from_nominal: -6044
+
+reinforce_2tank:
+  label: "REINFORCE"
+  
+  quantile_below: 0.4
+  quantile_above: 0.6
+  rolling_median_window: 10
+  max_loc: 100000
+  from_nominal: -6044
+  is_smooth_bezier: True
+
+vpg_2tank:
+  label: "VPG"
+  
+  quantile_below: 0.4
+  quantile_above: 0.6
+  rolling_median_window: 10
+  max_loc: 100000
+  from_nominal: -6044
+  is_smooth_bezier: True
+
+ddpg_2tank:
+  label: "DDPG"
+  
+  quantile_below: 0.4
+  quantile_above: 0.6
+  rolling_median_window: 10
+  max_loc: 100000
+  from_nominal: -6044
+  is_smooth_bezier: True
+
+td3_2tank:
+  label: "TD3"
+  quantile_below: 0.4
+  quantile_above: 0.6
+  rolling_median_window: 10
+  max_loc: 100000
+  from_nominal: -6044
+  is_smooth_bezier: True
+
+sac_2tank:
+  label: "SAC"
+  quantile_below: 0.4
+  quantile_above: 0.6
+  rolling_median_window: 10
+  max_loc: 100000
+  from_nominal: -6044
+  is_smooth_bezier: True

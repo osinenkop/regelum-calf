@@ -1,0 +1,16 @@
+[run]
+omit = 
+    ${COVERAGE_HOME}/.nox/*
+    ${COVERAGE_HOME}/*tests*
+    ${COVERAGE_HOME}/plugins/*
+
+[report]
+exclude_lines =
+    pragma: no cover
+    # Don't complain if tests don't hit defensive assertion code:
+    raise AssertionError
+    raise NotImplementedError
+    raise TypeError
+    @deprecated
+    assert False
+

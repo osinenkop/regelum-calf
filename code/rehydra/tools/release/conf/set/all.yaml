@@ -1,0 +1,13 @@
+# @package _global_
+defaults:
+  - /packages:
+      - rehydra
+      - configen
+      - rehydra_ax_sweeper
+      - rehydra_colorlog
+      - rehydra_joblib_launcher
+      - rehydra_nevergrad_sweeper
+      - rehydra_optuna_sweeper
+      - rehydra_ray_launcher
+      - rehydra_rq_launcher
+      - rehydra_submitit_launcher

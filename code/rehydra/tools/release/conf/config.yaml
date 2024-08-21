@@ -1,0 +1,8 @@
+defaults:
+  - config_schema
+  - set: all
+  - _self_
+
+rehydra:
+  job:
+    chdir: true

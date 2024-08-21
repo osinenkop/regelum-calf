@@ -1,0 +1,62 @@
+pendulum:
+  centers:
+    - 0
+    - 0
+  radii:
+    - 0.25
+    - 0.25
+
+lunar_lander:
+  centers:
+    - null 
+    - 1
+    - 0
+    - null
+    - null
+    - null
+  radii:
+    - null
+    - 0.05
+    - 0.3
+    - null
+    - null
+    - null
+
+omnibot:
+  centers:
+    - 0
+    - 0
+  radii:
+    - 0.5
+    - 0.5
+
+2tank:
+  centers:
+    - 0.4
+    - 0.4 
+  radii:
+    - 0.05
+    - 0.05
+  
+3wrobot_kin:
+  centers:
+    - 0
+    - 0
+    - 0
+  radii:
+    - 1
+    - 1
+    - 0.7
+
+inverted_pendulum:
+  centers:
+    - 0
+    - null
+    - null
+    - null
+  radii:
+    - 0.1
+    - null
+    - null
+    - null
+

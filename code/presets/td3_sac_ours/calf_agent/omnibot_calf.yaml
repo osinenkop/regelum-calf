@@ -1,0 +1,29 @@
+_target_: goalagent.calf.agent_calf.AgentCALF
+env: ~ env
+safe_policy: 
+  _target_: goalagent.env.omnibot.OmnibotStabilizingPolicy
+  gain: 0.5
+sampling_time: $ env.simulator.max_step
+critic_safe_decay_param: 100.0
+critic_regularization_param: 1000000
+critic_lb_parameter: 1.0E-3
+critic_td_n: 1
+critic_batch_size: 2
+relax_probability_min: 0.75
+relax_probability_max: 0.999
+relax_probability_stabilize_global_step: 40000
+relax_probability_fraction_reverse: True
+is_nominal_first: true
+critic_model:
+  _target_: srccode.model.ModelQuadLin
+  quad_matrix_type: diagonal
+  is_with_linear_terms: False
+  dim_inputs: 2
+  weight_max: 200
+  add_random_init_noise: True
+running_objective:
+  _target_: goalagent.env.running_objective.RgQuadraticRunningObjective
+  weights: = numpy.array([10.0, 10.0, 0.0, 0.0])
+observer:
+  _target_: srccode.observer.ObserverTrivial
+

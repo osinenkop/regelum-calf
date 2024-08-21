@@ -1,0 +1,11 @@
+defaults:
+  - env: pendulum-v1
+  - env_spec: ${env}
+  - calf_agent: ${env}
+
+total_timesteps: 50200
+seed: 0
+
+rehydra:
+  sweep:
+    dir: ${oc.env:SRCCODE_DATA_DIR}/outputs/${now:%Y-%m-%d}/${now:%H-%M-%S}

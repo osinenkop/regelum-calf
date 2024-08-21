@@ -1,0 +1,10 @@
+.python-version
+poetry.lock
+runs
+.vscode
+*__pycache__*
+*multirun*
+.idea
+mlruns/*
+*.sqlite
+*srccode_data*

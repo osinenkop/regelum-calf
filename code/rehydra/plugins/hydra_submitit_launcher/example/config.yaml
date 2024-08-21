@@ -1,0 +1,4 @@
+defaults:
+  - override rehydra/launcher: submitit_slurm
+
+task: 1

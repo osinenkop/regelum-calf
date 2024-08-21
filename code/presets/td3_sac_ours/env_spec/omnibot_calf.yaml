@@ -1,0 +1,7 @@
+observations_names:
+  - "x"
+  - "y"
+
+actions_names:
+  - "v_x"
+  - "v_y"

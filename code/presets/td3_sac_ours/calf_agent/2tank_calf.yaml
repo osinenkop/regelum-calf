@@ -1,0 +1,29 @@
+_target_: goalagent.calf.agent_calf.AgentCALF
+env: ~ env
+safe_policy: 
+  _target_: goalagent.env.two_tank.TwoTankStabilizingPolicy
+  p: 6.5
+  d: 2.0
+sampling_time: $ env.simulator.max_step
+critic_safe_decay_param: 0.01
+critic_regularization_param: 10000
+critic_lb_parameter: 1.0E-2
+critic_td_n: 1
+critic_batch_size: 3
+relax_probability_min: 0.00 
+relax_probability_max: 0.8
+relax_probability_stabilize_global_step: 10000
+is_nominal_first: true
+critic_model:
+  _target_: srccode.model.ModelQuadLin
+  quad_matrix_type: symmetric
+  is_with_linear_terms: False
+  dim_inputs: 2
+  add_random_init_noise: True
+  # weight_max: 200
+running_objective:
+  _target_: goalagent.env.running_objective.RgQuadraticRunningObjective
+  weights: = numpy.array([10., 10., 0.])
+observer:
+  _target_: srccode.observer.ObserverReference
+  reference: = numpy.array([0.4, 0.4])

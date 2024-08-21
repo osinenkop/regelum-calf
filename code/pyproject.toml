@@ -1,0 +1,51 @@
+[tool.poetry]
+name = "goalagent"
+version = "0.1.0"
+description = ""
+authors = ["Your Name <you@example.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [
+    { include = "srccode" }, { include="goalagent" }
+]
+
+
+[tool.poetry.dependencies]
+python = ">=3.10,<3.11"
+gymnasium = {extras = ["mujoco"], version = "==0.29.1"}
+matplotlib = "==3.6.3"
+mpldatacursor-rcognita = "==0.7.2"
+numpy = "==1.26.3"
+scipy = "==1.11.4"
+svgpath2mpl = "==0.2.1"
+tabulate = "==0.8.7"
+systems = "==0.1.0"
+shapely = "==1.7.1"
+omegaconf = "==2.3.0"
+pandas = "==2.0.0"
+casadi = "==3.6.3"
+dill = "==0.3.7"
+plotly = "==5.13.0"
+gitpython = "==3.1.30"
+filelock = "==3.0.12"
+tables = "==3.8.0"
+mlflow = "==2.4.1"
+matplotx = "==0.3.10"
+svgpathtools = "==1.6.1"
+PyQt5 = "==5.15.9"
+torch = "==2.1.2"
+gpytorch = "==1.8.0"
+cues = "==0.3.0"
+sqlmodel = "==0.0.21"
+typer = "==0.12.3"
+loguru = "==0.7.2"
+rehydra = {path = "rehydra"}
+rehydra-joblib-launcher = {path = "rehydra/plugins/rehydra_joblib_launcher"}
+stable-baselines3 = "==2.3.2"
+bezier = "==2023.7.28"
+scienceplots = "==2.1.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

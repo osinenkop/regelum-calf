@@ -1,0 +1,4 @@
+# @package _global_
+rehydra:
+  run:
+    dir: /tmp/${now:%Y-%m-%d}/${now:%H-%M-%S}

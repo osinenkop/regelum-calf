@@ -1,0 +1,33 @@
+observations_names:
+  - "x"
+  - "y"
+  - "angle"
+  - "v_x"
+  - "v_y"
+  - "angle_vel"
+
+actions_names:
+  - "F_side"
+  - "F_vert"
+
+nominal_policy:
+  _target_: goalagent.env.lunar_lander.LunarLanderStabilizingPolicy
+
+goal_reaching_func:
+  _target_: goalagent.env.lunar_lander.LunarLanderGoalReachingFunc
+
+system: 
+  _target_: goalagent.env.lunar_lander.LunarLander
+
+# running_objective:
+#   _target_: goalagent.env.running_objective.LunarLanderRunningObjective
+#   weights: = numpy.array([100.0, 1.0, 1.0, 1.0, 1.0, 1.0, 0.0, 0.0])
+#   biases: = numpy.array([0., 1., 0., 0., 0., 0.])
+
+running_objective:
+  _target_: goalagent.env.running_objective.QuadraticRunningObjective
+  weights: = numpy.array([1, 0.1, 10, 0.1, 0.1, 0.1, 0., 0.])
+  biases: = numpy.array([0., 1., 0., 0., 0., 0.])
+  
+
+checkpoint_path: lunar_lander

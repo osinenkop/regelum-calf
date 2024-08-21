@@ -1,0 +1,18 @@
+observations_names:
+  - "x"
+  - "y"
+
+actions_names:
+  - "v_x"
+  - "v_y"
+
+
+nominal_policy:
+  _target_: goalagent.env.omnibot.OmnibotStabilizingPolicy
+  gain: 0.5
+
+observer:
+  _target_: goalagent.env.omnibot.OmnibotObserver
+
+
+checkpoint_path: omnibot

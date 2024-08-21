@@ -1,0 +1,9 @@
+_target_: srccode.policy.InvertedPendulumStabilizingPolicy
+
+gain: 0.03 
+action_min: -0.1
+action_max: 0.1
+pd_coeffs: = [0.6, 0.2]
+switch_loc: = np.cos(np.pi / 10)
+switch_vel_loc: 0.2
+system: ~ system

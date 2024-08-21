@@ -1,0 +1,12 @@
+_target_: goalagent.env.rg_env.RgEnv
+
+simulator:
+  _target_: srccode.simulator.CasADi
+  system: 
+    _target_: goalagent.env.omnibot.Omnibot
+  state_init: = numpy.array([[-10, -10]])
+  time_final: 10
+  max_step: 0.01
+running_objective:
+  _target_: goalagent.env.running_objective.QuadraticRunningObjective
+  weights: = numpy.array([10., 10., 0.0, 0.0])

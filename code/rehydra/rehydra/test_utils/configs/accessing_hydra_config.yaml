@@ -1,0 +1,3 @@
+cwd: ${rehydra:runtime.cwd}
+job_name: ${rehydra:job.name}
+config_name: ${rehydra:job.config_name}

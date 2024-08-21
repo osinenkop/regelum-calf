@@ -1,0 +1,379 @@
+ppo_pendulum:
+  quantile_below: 0.4
+  quantile_above: 0.6
+  rolling_median_window: 10
+  max_loc: 1000000
+  from_nominal: -3333
+  is_with_pretrain_stats: True
+  is_smooth_bezier: True
+
+ppo_omnibot:
+  quantile_below: 0.4
+  quantile_above: 0.6
+  rolling_median_window: 10
+  max_loc: 1000000
+  from_nominal: -200400
+  is_with_pretrain_stats: True
+  is_smooth_bezier: True
+
+ppo_lunar_lander:
+  quantile_below: 0.4
+  quantile_above: 0.6
+  rolling_median_window: 10
+  max_loc: 1000000
+  from_nominal: -8083
+  is_with_pretrain_stats: True
+  is_smooth_bezier: True
+
+ppo_3wrobot_kin:
+  quantile_below: 0.4
+  quantile_above: 0.6
+  rolling_median_window: 10
+  max_loc: 1000000
+  from_nominal: -30197.867
+  is_with_pretrain_stats: True
+  is_smooth_bezier: True
+
+ppo_2tank:
+  quantile_below: 0.4
+  quantile_above: 0.6
+  rolling_median_window: 10
+  max_loc: 1000000
+  from_nominal: -6044
+  is_with_pretrain_stats: True
+  is_smooth_bezier: True
+
+ppo_inverted_pendulum:
+  quantile_below: 0.4
+  quantile_above: 0.6
+  rolling_median_window: 10
+  max_loc: 1000000
+  from_nominal: -11308
+  is_with_pretrain_stats: True
+  is_smooth_bezier: True
+
+reinforce_2tank:
+  quantile_below: 0.4
+  quantile_above: 0.6
+  rolling_median_window: 10
+  max_loc: 1000000
+  from_nominal: -6044
+  is_with_pretrain_stats: True
+  is_smooth_bezier: True
+
+reinforce_omnibot:
+  quantile_below: 0.4
+  quantile_above: 0.6
+  rolling_median_window: 10
+  max_loc: 1000000
+  from_nominal: -200400
+  is_with_pretrain_stats: True
+  is_smooth_bezier: True
+
+reinforce_lunar_lander:
+  quantile_below: 0.4
+  quantile_above: 0.6
+  rolling_median_window: 10
+  max_loc: 1000000
+  from_nominal: -8083
+  is_with_pretrain_stats: True
+  is_smooth_bezier: True
+
+reinforce_3wrobot_kin:
+  quantile_below: 0.4
+  quantile_above: 0.6
+  rolling_median_window: 10
+  max_loc: 1000000
+  from_nominal: -30197.867
+  is_with_pretrain_stats: True
+  is_smooth_bezier: True
+
+reinforce_inverted_pendulum:
+  quantile_below: 0.4
+  quantile_above: 0.6
+  rolling_median_window: 10
+  max_loc: 1000000
+  from_nominal: -11308
+  is_with_pretrain_stats: True
+  is_smooth_bezier: True
+
+reinforce_pendulum:
+  quantile_below: 0.4
+  quantile_above: 0.6
+  rolling_median_window: 10
+  max_loc: 1000000
+  from_nominal: -3333
+  is_with_pretrain_stats: True
+  is_smooth_bezier: True
+
+vpg_2tank:
+  quantile_below: 0.4
+  quantile_above: 0.6
+  rolling_median_window: 10
+  max_loc: 1000000
+  from_nominal: -6044
+  is_with_pretrain_stats: True
+  is_smooth_bezier: True
+
+vpg_omnibot:
+  quantile_below: 0.4
+  quantile_above: 0.6
+  rolling_median_window: 10
+  max_loc: 1000000
+  from_nominal: -200400
+  is_with_pretrain_stats: True
+  is_smooth_bezier: True
+
+vpg_pendulum:
+  quantile_below: 0.4
+  quantile_above: 0.6
+  rolling_median_window: 10
+  max_loc: 1000000
+  from_nominal: -3333
+  is_with_pretrain_stats: True
+  is_smooth_bezier: True
+
+vpg_lunar_lander:
+  quantile_below: 0.4
+  quantile_above: 0.6
+  rolling_median_window: 10
+  max_loc: 1000000
+  from_nominal: -8083
+  is_with_pretrain_stats: True
+  is_smooth_bezier: True
+
+vpg_3wrobot_kin:
+  quantile_below: 0.4
+  quantile_above: 0.6
+  rolling_median_window: 10
+  max_loc: 1000000
+  from_nominal: -30197.867
+  is_with_pretrain_stats: True
+  is_smooth_bezier: True
+
+vpg_inverted_pendulum:
+  quantile_below: 0.4
+  quantile_above: 0.6
+  rolling_median_window: 10
+  max_loc: 1000000
+  from_nominal: -11308
+  is_with_pretrain_stats: True
+  is_smooth_bezier: True
+
+ddpg_pendulum:
+  quantile_below: 0.4
+  quantile_above: 0.6
+  rolling_median_window: 10
+  max_loc: 1000000
+  from_nominal: -3333
+  is_with_pretrain_stats: True
+  is_smooth_bezier: True
+
+ddpg_2tank:
+  quantile_below: 0.4
+  quantile_above: 0.6
+  rolling_median_window: 10
+  max_loc: 1000000
+  from_nominal: -6044
+  is_with_pretrain_stats: True
+  is_smooth_bezier: True
+
+ddpg_omnibot:
+  quantile_below: 0.4
+  quantile_above: 0.6
+  rolling_median_window: 10
+  max_loc: 1000000
+  from_nominal: -200400
+  is_with_pretrain_stats: True
+  is_smooth_bezier: True
+
+ddpg_lunar_lander:
+  quantile_below: 0.4
+  quantile_above: 0.6
+  rolling_median_window: 10
+  max_loc: 1000000
+  from_nominal: -8083
+  is_with_pretrain_stats: True
+  is_smooth_bezier: True
+
+ddpg_3wrobot_kin:
+  quantile_below: 0.4
+  quantile_above: 0.6
+  rolling_median_window: 10
+  max_loc: 1000000
+  from_nominal: -30197.867
+  is_with_pretrain_stats: True
+  is_smooth_bezier: True
+
+ddpg_inverted_pendulum:
+  quantile_below: 0.4
+  quantile_above: 0.6
+  from_nominal: -11308
+  is_with_pretrain_stats: True
+  rolling_median_window: 10
+  max_loc: 1000000
+  # from_nominal: -200400
+  is_smooth_bezier: True
+
+sac_pendulum:
+  quantile_below: 0.4
+  quantile_above: 0.6
+  rolling_median_window: 1
+  max_loc: 40000
+  from_nominal: -3330
+  is_with_pretrain_stats: True
+  is_smooth_bezier: True
+
+sac_2tank:
+  quantile_below: 0.4
+  quantile_above: 0.6
+  rolling_median_window: 10
+  max_loc: 40000
+  from_nominal: -6044
+  is_with_pretrain_stats: True
+  is_smooth_bezier: True
+
+sac_3wrobot_kin:
+  quantile_below: 0.4
+  quantile_above: 0.6
+  rolling_median_window: 10
+  max_loc: 1000000
+  from_nominal: -30197.867
+  is_with_pretrain_stats: True
+  is_smooth_bezier: True
+
+sac_lunar_lander:
+  quantile_below: 0.4
+  quantile_above: 0.6
+  rolling_median_window: 10
+  max_loc: 1000000
+  from_nominal: -8083.2573
+  is_with_pretrain_stats: True
+  is_smooth_bezier: True
+
+sac_omnibot:
+  quantile_below: 0.4
+  quantile_above: 0.6
+  rolling_median_window: 10
+  max_loc: 1000000
+  from_nominal: -200492.61
+  is_with_pretrain_stats: True
+  is_smooth_bezier: True
+
+sac_inverted_pendulum:
+  quantile_below: 0.4
+  quantile_above: 0.6
+  rolling_median_window: 10
+  max_loc: 1000000
+  from_nominal: -11308.32
+  is_with_pretrain_stats: True
+  is_smooth_bezier: True
+
+td3_pendulum:
+  quantile_below: 0.4
+  quantile_above: 0.6
+  rolling_median_window: 1
+  max_loc: 100000
+  from_nominal: -3330
+  is_with_pretrain_stats: True
+  is_smooth_bezier: True
+
+td3_2tank:
+  quantile_below: 0.4
+  quantile_above: 0.6
+  rolling_median_window: 10
+  max_loc: 1000000
+  from_nominal: -6044
+  is_with_pretrain_stats: True
+  is_smooth_bezier: True
+
+td3_3wrobot_kin:
+  quantile_below: 0.4
+  quantile_above: 0.6
+  rolling_median_window: 10
+  max_loc: 1000000
+  from_nominal: -30197.867
+  is_with_pretrain_stats: True
+  is_smooth_bezier: True
+
+td3_lunar_lander:
+  quantile_below: 0.4
+  quantile_above: 0.6
+  rolling_median_window: 10
+  max_loc: 1000000
+  from_nominal: -8083.2573
+  is_with_pretrain_stats: True
+  is_smooth_bezier: True
+
+td3_omnibot:
+  quantile_below: 0.4
+  quantile_above: 0.6
+  rolling_median_window: 10
+  max_loc: 1000000
+  from_nominal: -200492.61
+  is_with_pretrain_stats: True
+  is_smooth_bezier: True
+
+td3_inverted_pendulum:
+  quantile_below: 0.4
+  quantile_above: 0.6
+  rolling_median_window: 10
+  max_loc: 1000000
+  from_nominal: -11308.32
+  is_with_pretrain_stats: True
+  is_smooth_bezier: True
+
+calf_pendulum:
+  quantile_below: 0.4
+  quantile_above: 0.6
+  rolling_median_window: 1
+  max_loc: 40000
+  from_nominal: -3330
+  is_smooth_bezier: True
+  is_with_pretrain_stats: True
+
+calf_lunar_lander:
+  quantile_below: 0.4
+  quantile_above: 0.6
+  rolling_median_window: 1
+  max_loc: 55000
+  from_nominal: -8000
+  is_smooth_bezier: True
+  is_with_pretrain_stats: True
+
+calf_inverted_pendulum:
+  quantile_below: 0.25
+  quantile_above: 0.75
+  rolling_median_window: 1
+  is_smooth_bezier: True
+  # max_loc: 10100
+  is_with_pretrain_stats: True
+  from_nominal: -11308
+
+calf_omnibot:
+  quantile_below: 0.4
+  quantile_above: 0.6
+  rolling_median_window: 1
+  # max_loc: 10100
+  from_nominal: -200400
+  is_with_pretrain_stats: True
+  is_smooth_bezier: True
+
+calf_2tank:
+  quantile_below: 0.4
+  quantile_above: 0.6
+  rolling_median_window: 1
+  is_smooth_bezier: True
+  # max_loc: 10100
+  from_nominal: -6044
+  is_with_pretrain_stats: True
+
+calf_3wrobot_kin:
+  quantile_below: 0.4
+  quantile_above: 0.6
+  rolling_median_window: 1
+  is_smooth_bezier: True
+  # max_loc: 10100
+  from_nominal: -30_197
+  is_with_pretrain_stats: True
+

@@ -1,0 +1,23 @@
+defaults:
+  - env: pendulum-v1
+  - env_spec: ${env}
+
+
+
+seed: 1
+device: "cuda:0"
+total_timesteps: 1000000
+learning_rate: 3.0E-4
+buffer_size: 1000000
+gamma: 0.99
+tau: 0.005
+batch_size: 256
+policy_noise: 0.2
+exploration_noise: 0.1
+learning_starts: 25000
+policy_frequency: 2
+noise_clip: 0.5
+
+rehydra:
+  sweep:
+    dir: ${oc.env:SRCCODE_DATA_DIR}/outputs/${now:%Y-%m-%d}/${now:%H-%M-%S}

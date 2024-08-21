@@ -1,0 +1,12 @@
+_target_: goalagent.env.rg_env.RgEnv
+
+simulator:
+  _target_: srccode.simulator.CasADi
+  system: 
+    _target_: goalagent.env.robot.ThreeWheeledRobotKinematic
+  state_init: = numpy.array([[5., 5., 2 * numpy.pi / 3.]])
+  time_final: 5
+  max_step: 0.01
+running_objective:
+  _target_: goalagent.env.running_objective.QuadraticRunningObjective
+  weights: = numpy.array([1., 10., 1., 0.0, 0.0])

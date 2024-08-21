@@ -1,0 +1,34 @@
+observations_names:
+  - "x" 
+  - "y"
+  - "angle"
+
+actions_names:
+  - vel
+  - angle_vel 
+
+
+calf_agent:
+  _target_: goalagent.calf.agent_calf.AgentCALF
+  env: ~ env
+  safe_policy: 
+    _target_: goalagent.env.robot.ThreeWheeledRobotKinematicStabilizingPolicy
+    K: 3
+  sampling_time: $ env.simulator.max_step
+  critic_safe_decay_param: 1.0
+  critic_regularization_param: 30000
+  critic_td_n: 2
+  critic_batch_size: 32
+  relax_probability_min: 0.00 
+  relax_probability_max: 0.49
+  relax_probability_stabilize_global_step: 10000
+  critic_model:
+    _target_: srccode.model.ModelQuadLin
+    quad_matrix_type: full
+    is_with_linear_terms: False
+    dim_inputs: 3
+  running_objective:
+    _target_: goalagent.env.running_objective.RgQuadraticRunningObjective
+    weights: = numpy.array([1.0, 10.0, 1.0, 0.0, 0.0])
+  observer:
+    _target_: srccode.observer.ObserverTrivial

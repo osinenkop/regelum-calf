@@ -1,0 +1,25 @@
+# Help header.
+#
+# Basic Rehydra flags:
+#   $FLAGS_HELP
+#
+# Config groups, choose one of:
+#   $APP_CONFIG_GROUPS: All config groups that does not start with rehydra/.
+#   $REHYDRA_CONFIG_GROUPS: All the Rehydra config groups (starts with rehydra/)
+#
+# Configuration generated with overrides:
+#   $CONFIG : Generated config
+#
+template: |
+  Rehydra (${rehydra.runtime.version})
+  See https://rehydra.cc for more info.
+
+  == Flags ==
+  $FLAGS_HELP
+
+  == Configuration groups ==
+  Compose your configuration from those groups (For example, append rehydra/job_logging=disabled to command line)
+
+  $REHYDRA_CONFIG_GROUPS
+
+  Use '--cfg rehydra' to Show the Rehydra config.

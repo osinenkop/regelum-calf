@@ -1,0 +1,5 @@
+defaults:
+  - override rehydra/launcher: custom_ray_aws
+
+random_seed: 0
+checkpoint_path: checkpoint

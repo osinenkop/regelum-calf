@@ -1,0 +1,39 @@
+# App name, override to match the name your app is known by
+app_name: AwesomeApp
+
+# Help header, customize to describe your app to your users
+header: == ${rehydra.help.app_name} ==
+
+footer: |-
+  Powered by Rehydra (https://rehydra.cc)
+  Use --rehydra-help to view Rehydra specific help
+
+# Basic Rehydra flags:
+#   $FLAGS_HELP
+#
+# Config groups, choose one of:
+#   $APP_CONFIG_GROUPS: All config groups that does not start with rehydra/.
+#   $HYDRA_CONFIG_GROUPS: All the Rehydra config groups (starts with rehydra/)
+#
+# Configuration generated with overrides:
+#   $CONFIG : Generated config
+#
+template: |-
+  ${rehydra.help.header}
+
+  This is ${rehydra.help.app_name}!
+  You can choose a db driver by appending
+  == Configuration groups ==
+  Compose your configuration from those groups (db=mysql)
+
+  $APP_CONFIG_GROUPS
+
+  == Config ==
+  This is the config generated for this run.
+  You can override everything, for example:
+  python my_app.py db.user=foo db.pass=bar
+  -------
+  $CONFIG
+  -------
+
+  ${rehydra.help.footer}

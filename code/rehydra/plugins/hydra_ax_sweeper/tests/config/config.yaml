@@ -1,0 +1,23 @@
+defaults:
+  - _self_
+  - quadratic: null
+  - params: null
+  - override rehydra/sweeper: ax
+
+quadratic:
+  x: ???
+  y: ???
+
+rehydra:
+  sweeper:
+    ax_config:
+      client:
+        random_seed: 1
+
+      max_trials: 5
+
+      experiment:
+        minimize: true
+
+      early_stop:
+        max_epochs_without_improvement: 2

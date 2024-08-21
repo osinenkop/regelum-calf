@@ -1,0 +1,47 @@
+observations_names:
+  - "x"
+  - "y"
+  - "angle"
+  - "v_x"
+  - "v_y"
+  - "angle_vel"
+
+actions_names:
+  - "F_vert"
+  - "F_side"
+
+calfq_kwargs: 
+  nominal_policy:
+    _target_: goalagent.env.lunar_lander.LunarLanderStabilizingPolicy
+  goal_reaching_func:
+    _target_: goalagent.env.lunar_lander.LunarLanderGoalReachingFunc
+  critic_struct: quadratic
+  critic_learn_rate: 0.5
+  critic_num_grad_steps: 1
+  buffer_size: 20
+  actor_opt_method: L-BFGS-B
+  actor_opt_options:
+    maxiter: 140
+    maxfev: 160
+    disp: False
+    adaptive: True
+    xatol: 1.0e-3
+    fatol: 1.0e-3
+  use_grad_descent: True
+  use_decay_constraint: True
+  use_kappa_constraint: True
+  check_persistence_of_excitation: True
+  critic_weight_change_penalty_coeff: 10000.
+  # critic_weights_init: = numpy.array([[27891.86169244, 36044.27895225, 30535.40542751, 27699.27596685, 21759.08516761, 32648.81154027, 22441.77335187, 44696.87703832, 48219.47526455, 19788.63442246, 39794.52686605, 26915.85106789,28834.1834936 , 46354.23527634,  4480.7668517 ,  5269.33568538,1990.70147458, 41798.37243185, 39129.68079654, 43630.59526409,48952.29876941, 40158.76964662, 23612.48875039, 39245.92963804,6795.44686758, 32356.13004505,  8024.31108304, 47288.77693543,26570.56776575, 21318.43505954, 13963.22499313, 38937.45078228,23351.36627861, 28853.26349456,  1920.70022138, 31264.13935672]])
+  critic_weights_init: null
+system:
+  _target_: goalagent.env.lunar_lander.LunarLanderWithOffset
+
+running_objective:
+  _target_: goalagent.env.running_objective.LunarLanderRunningObjective
+  weights: = numpy.array([100.0, 1.0, 1.0, 1.0, 1.0, 1.0, 0.0, 0.0])
+  biases: = numpy.array([0., 0., 0., 0., 0., 0.])
+
+checkpoint_path: lunar_lander
+
+sampling_time: 0.1

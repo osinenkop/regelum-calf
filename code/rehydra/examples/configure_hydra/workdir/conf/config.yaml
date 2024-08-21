@@ -1,0 +1,9 @@
+# @package _global_
+rehydra:
+  run:
+    dir: run_dir
+  sweep:
+    dir: sweep_dir
+    subdir: ${rehydra.job.num}
+
+a: a1

@@ -1,0 +1,16 @@
+defaults:
+  - override rehydra/sweeper: ax
+
+polynomial:
+  coefficients: ???
+
+rehydra:
+  sweeper:
+    ax_config:
+      max_trials: 10
+
+      experiment:
+        minimize: true
+
+      early_stop:
+        max_epochs_without_improvement: 2

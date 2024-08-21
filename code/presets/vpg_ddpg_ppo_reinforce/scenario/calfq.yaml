@@ -1,0 +1,35 @@
+_target_: srccode.scenario.Scenario
+
+name%%: nominal
+
+policy: 
+  _target_: srccode.policy.InvertedPendulumRcognitaCALFQ
+  gain: 0.03
+  action_min: -0.1
+  action_max: 0.1
+  pd_coeffs: = [0.6, 0.2]
+  switch_loc: = np.cos(np.pi / 10)
+  system: ~ system
+  nominal_policy: ~ nominal_policy
+  relax_probability: 0.99
+  relax_probability_fading_factor: 0.0 
+  relax_probability_init: 
+  goal_treshold: 0.4
+  discount_factor: 1.0 
+  buffer_size: 20
+  critic_learn_rate: 0.0005
+  critic_num_grad_steps: 1
+  critic_struct: quad-mix
+  critic_weight_change_penalty_coeff: 0.0
+  critic_low_kappa_coeff: 1.0E-2 
+  critic_up_kappa_coeff: 1.0E-4
+  critic_desired_decay_coeff: 1.0E-4 
+  critic_max_desired_decay_coeff: 1.0E-1
+  calf_penalty_coeff: 0.5
+  safe_only: False
+sampling_time: $ system_specific.sampling_time
+running_objective: ~ running_objective
+discount_factor: 1.0 
+simulator: ~ simulator
+observer: = srccode.observer.ObserverTrivial()
+N_iterations: 1

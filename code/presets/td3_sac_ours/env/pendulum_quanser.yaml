@@ -1,0 +1,16 @@
+_target_: goalagent.env.rg_env.RgEnv
+
+simulator:
+  _target_: goalagent.env.utils.random_state_simulator.StateInitRandomSamplerSimulator
+  system: 
+    _target_: goalagent.env.pendulum.PendulumQuanserWithGymObservation
+  state_init: 
+    _target_: goalagent.env.utils.random_state_simulator.UniformStateInitGenerator
+    bounds: 
+      - = [-numpy.pi, numpy.pi]
+      - = [-1, 1]
+    
+  time_final: 10
+  max_step:  0.01
+running_objective:
+  _target_: goalagent.env.running_objective.GymPendulumRunningObjective

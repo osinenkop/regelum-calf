@@ -1,0 +1,44 @@
+observations_names:
+  - angle
+  - angle_vel
+
+actions_names:
+  - torque
+
+
+calfq_kwargs: 
+  nominal_policy:
+    _target_: goalagent.env.pendulum.PendulumStabilizingPolicy
+    gain: 0.03
+    action_min: -0.1
+    action_max: 0.1
+    switch_loc: = np.cos(np.pi / 10)
+    switch_vel_loc: 0.2
+    pd_coeffs: = [0.6, 0.2]
+    system: 
+      _target_: goalagent.env.pendulum.PendulumQuanser
+  goal_reaching_func:
+    _target_: goalagent.env.pendulum.PendulumGoalReachingFunction
+    goal_threshold: 0.4 
+  critic_struct: quad-mix
+  critic_weights_init: = np.array([7196.45, 323.51, 34839.243, -97235.899, 13453.018])
+  critic_learn_rate: 0.001
+  critic_num_grad_steps: 1
+  buffer_size: 10
+  actor_opt_method: SLSQP
+  actor_opt_options:
+    maxiter: 40
+    disp: False
+  use_grad_descent: True
+  use_decay_constraint: False
+  use_kappa_constraint: False
+  check_persistence_of_excitation: True
+  critic_weight_change_penalty_coeff: 0.0
+
+system: 
+  _target_: goalagent.env.pendulum.PendulumQuanser
+
+running_objective:
+  _target_: goalagent.env.running_objective.GymPendulumRunningObjective
+
+sampling_time: 0.01

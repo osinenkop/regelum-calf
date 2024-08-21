@@ -1,0 +1,4 @@
+defaults:
+  - override rehydra/launcher: ray_aws
+
+task: 1

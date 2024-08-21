@@ -1,0 +1,32 @@
+defaults:
+  - env: pendulum-v1
+  - env_spec: ${env}
+    
+agent:
+  _target_: goalagent.calf.agent_calfq.AgentCALFQ
+  nominal_policy: $ env_spec.calfq_kwargs.nominal_policy
+  system: $ env_spec.system
+  goal_reaching_func: $ env_spec.calfq_kwargs.goal_reaching_func
+  running_objective: $ env_spec.running_objective
+  action_sampling_period: $ env_spec.sampling_time
+  critic_weights_init: $ env_spec.calfq_kwargs.critic_weights_init
+  critic_struct: $ env_spec.calfq_kwargs.critic_struct
+  critic_learn_rate: $ env_spec.calfq_kwargs.critic_learn_rate
+  critic_num_grad_steps: $ env_spec.calfq_kwargs.critic_num_grad_steps
+  buffer_size: $ env_spec.calfq_kwargs.buffer_size
+  actor_opt_method: $ env_spec.calfq_kwargs.actor_opt_method
+  actor_opt_options: $ env_spec.calfq_kwargs.actor_opt_options
+  use_grad_descent: $ env_spec.calfq_kwargs.use_grad_descent
+  use_decay_constraint: $ env_spec.calfq_kwargs.use_decay_constraint
+  use_kappa_constraint: $ env_spec.calfq_kwargs.use_kappa_constraint
+  check_persistence_of_excitation: $ env_spec.calfq_kwargs.check_persistence_of_excitation
+  critic_weight_change_penalty_coeff: $ env_spec.calfq_kwargs.critic_weight_change_penalty_coeff
+  relax_probability_min: 0.01
+  relax_probability_max: 0.999
+
+total_timesteps: 40200
+seed: 0
+
+rehydra:
+  sweep:
+    dir: ${oc.env:SRCCODE_DATA_DIR}/outputs/${now:%Y-%m-%d}/${now:%H-%M-%S}

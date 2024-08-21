@@ -1,0 +1,11 @@
+observations_names:
+  - "x"
+  - "y"
+  - "angle"
+  - "v_x"
+  - "v_y"
+  - "angle_vel"
+
+actions_names:
+  - "F_vert"
+  - "F_side"

@@ -1,0 +1,9 @@
+defaults:
+  - override rehydra/launcher: rq
+
+task: 1
+
+rehydra:
+  launcher:
+    enqueue:
+      job_timeout: '1d'

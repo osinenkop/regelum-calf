@@ -1,0 +1,4 @@
+recursive-include rehydra_app *.py
+recursive-include rehydra_app *.yaml
+global-exclude *.pyc
+global-exclude __pycache__

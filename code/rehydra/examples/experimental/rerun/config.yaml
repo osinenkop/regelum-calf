@@ -1,0 +1,8 @@
+foo: bar
+
+rehydra:
+  callbacks:
+    save_job_info:
+      _target_: rehydra.experimental.callbacks.PickleJobInfoCallback
+  job:
+    chdir: false

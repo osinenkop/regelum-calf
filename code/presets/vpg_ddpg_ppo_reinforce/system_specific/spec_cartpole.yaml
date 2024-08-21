@@ -1,0 +1,12 @@
+name: cartpole
+target: srccode.system.CartPole
+observer: = srccode.observer.CartPoleObserver()
+dim_observation: = ${.target}().dim_observation
+dim_action: = ${.target}().dim_inputs
+
+time_final: 15.
+sampling_time: 0.01
+
+F_min: -50.
+F_max: 50.
+action_bounds: = [[${.F_min}, ${.F_max}]]

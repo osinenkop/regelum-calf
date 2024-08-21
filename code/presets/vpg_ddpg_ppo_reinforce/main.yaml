@@ -1,0 +1,29 @@
+defaults:
+  - system: inv_pendulum 
+  - simulator: casadi
+  - optional nominal_policy: nominal_${system}
+  - stopping_criterion: never #stopping_${system}
+  - scenario: reinforce
+  - running_objective: quadratic_${system}
+  - initial_conditions: ic_${system}
+  - system_specific: spec_${system}
+  - constraint_parser: trivial_parser
+
+callbacks:
+  - srccode.callback.ScenarioStepLogger
+  - srccode.callback.ValueCallback
+  - srccode.callback.HistoricalDataCallback
+  - srccode.callback.CriticObjectiveSaver
+  - srccode.callback.PolicyObjectiveSaver
+  - srccode.callback.CalfCallback
+  - srccode.callback.CALFWeightsCallback
+
+
+disallow_uncommitted%%: False
+
+
+prefix%%: ""
+
+rehydra:
+  sweep:
+    dir: ${oc.env:SRCCODE_DATA_DIR}/outputs/${now:%Y-%m-%d}/${now:%H-%M-%S}_${prefix%%}_${scenario.name%%}_${system_specific.name}

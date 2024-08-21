@@ -1,0 +1,3 @@
+rehydra_rq_launcher:
+  path: plugins/${.name}
+  version_file: rehydra_plugins/${.name}/__init__.py

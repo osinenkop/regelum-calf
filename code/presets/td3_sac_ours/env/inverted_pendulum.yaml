@@ -1,0 +1,11 @@
+_target_: goalagent.env.rg_env.RgEnv
+
+simulator:
+  _target_: srccode.simulator.CasADi 
+  system: 
+    _target_: goalagent.env.inverted_pendulum.InvertedPendulum
+  time_final: 15
+  max_step: 0.01
+  state_init: = numpy.array([[numpy.pi / 7, 2., 0., 0.]])
+running_objective:
+  _target_: goalagent.env.running_objective.InvertedPendulumRunningObjective

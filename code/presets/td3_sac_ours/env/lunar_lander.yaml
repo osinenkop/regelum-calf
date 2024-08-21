@@ -1,0 +1,13 @@
+_target_: goalagent.env.rg_env.RgEnv
+
+simulator:
+  _target_: srccode.simulator.CasADi
+  system: 
+    _target_: goalagent.env.lunar_lander.LunarLander
+  state_init: = numpy.array([[3, 5.,  2 *numpy.pi / 3., 0., 0., 0.]])
+  time_final: 4
+  max_step: 0.01
+  # state_init: = numpy.array([[-10.0, 45.0, 2 * np.pi / 3.0, 0.0, 0.0, 0.0]])
+  # time_final: 20
+  # max_step: 0.1
+running_objective: $ env_spec.running_objective

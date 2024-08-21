@@ -1,0 +1,12 @@
+defaults:
+  - config_schema
+  - _self_
+
+user:
+  age: 7
+  name: Bond
+
+admin:
+  age: 10
+  name: Lex Luthor
+  private_key: deadbeef

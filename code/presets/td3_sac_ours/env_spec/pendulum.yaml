@@ -1,0 +1,7 @@
+observations_names:
+  - cos_angle
+  - sin_angle
+  - angle_vel
+
+actions_names:
+  - torque

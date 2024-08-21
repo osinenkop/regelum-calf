@@ -1,0 +1,6 @@
+observations_names:
+  - "h1" 
+  - "h2"
+
+actions_names:
+  - action

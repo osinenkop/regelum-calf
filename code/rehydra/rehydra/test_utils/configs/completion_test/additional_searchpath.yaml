@@ -1,0 +1,8 @@
+defaults:
+  - _self_
+  - group: null
+
+rehydra:
+  searchpath:
+    - pkg://rehydra.test_utils.configs.completion_test_additional_package
+    - file://rehydra/test_utils/configs/completion_test_additional_file
