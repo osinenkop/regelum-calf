@@ -1,6 +1,6 @@
 # Overview
 
-This is the code associated with [the paper "An agent design with goal reaching guarantees for enhancement of learning"](to appear).
+This is the code associated with [the paper "An agent design with goal reaching guarantees for enhancement of learning"](https://arxiv.org/abs/2405.18118).
 
 ## Installation
 
