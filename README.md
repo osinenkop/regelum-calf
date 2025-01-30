@@ -1,6 +1,6 @@
 # Overview
 
-This is the code associated with the paper "A guaranteed method for goal-reaching to enhance reinforcement learning agents".
+This is the code associated with the paper "Critic Monotone Envelope for Assisting Reinforcement Learning Agents".
 
 ## Installation
 
