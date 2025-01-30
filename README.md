@@ -40,12 +40,12 @@ To run the experiments, follow the steps below after activating the virtual envi
    Update your system and install necessary dependencies:
    ```
    sudo apt update
-   sudo apt install -y libgeos-dev libqt5x11extras5 default-jre
+   sudo apt install -y libgeos-dev libqt5x11extras5 default-jre texlive texlive-latex-extra texlive-fonts-recommended dvipng cm-super
    ```
    
    Install the Python package in editable mode:
    ```
-   pip install -e .
+   pip install -e . --no-cache-dir
    ```
    
 2. Execute the experiment script:
